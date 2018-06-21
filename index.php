@@ -3,6 +3,7 @@
 require "vendor/autoload.php";
 
 use Acme\BookInterface;
+use Acme\Kindle;
 
 class Person{
 
@@ -15,4 +16,4 @@ class Person{
 
 
 $person = new Person();
-$person->read();
+$person->read(new KindleAdapter(new Kindle));
